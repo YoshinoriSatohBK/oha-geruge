@@ -1,11 +1,19 @@
 <template lang="pug">
   div
+    el-button.button(@click.stop="login()") Login
     el-button.button おはゲルゲ
 </template>
 
 <script>
+import { API } from 'aws-amplify'
+
 export default {
-  components: {}
+  components: {},
+  method: {
+    login() {
+      API.post('backend', '/post', param)
+    }
+  }
 }
 </script>
 

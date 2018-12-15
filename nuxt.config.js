@@ -69,9 +69,9 @@ module.exports = {
       API: {
         endpoints: [
           {
-            name: "backend",
-            endpoint: "https://",
-            region: "ap-northeast-1"
+            name: 'backend',
+            endpoint: 'https://c3y51aml72.execute-api.ap-northeast-1.amazonaws.com/Prod',
+            region: 'ap-northeast-1'
           }
         ]
       },
