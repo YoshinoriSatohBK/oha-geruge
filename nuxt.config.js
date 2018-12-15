@@ -62,8 +62,8 @@ module.exports = {
         endpoints: [
           {
             name: 'backend',
-            //endpoint: 'https://97rrz7ttfd.execute-api.ap-northeast-1.amazonaws.com/Prod',
-            endpoint: 'http://localhost:3000',
+            endpoint: 'https://97rrz7ttfd.execute-api.ap-northeast-1.amazonaws.com/Prod',
+            //endpoint: 'http://localhost:3000',
             region: 'ap-northeast-1'
           }
         ]
