@@ -9,9 +9,14 @@ import { API } from 'aws-amplify'
 
 export default {
   components: {},
-  method: {
-    login() {
-      API.post('backend', '/post', param)
+  methods: {
+    async login() {
+      const res = await API.post('backend', '/request_token', {})
+      sessionStorage.setItem('oauth_token', res.oauth_token)
+      sessionStorage.setItem('oauth_token_secret', res.oauth_token_secret)
+      window.location =
+        'https://api.twitter.com/oauth/authenticate?oauth_token=' +
+        res.oauth_token
     }
   }
 }
