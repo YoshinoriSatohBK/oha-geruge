@@ -15,7 +15,7 @@ export default {
         body: {
           access_token_key: localStorage.getItem('access_token'),
           access_token_secret: localStorage.getItem('access_token_secret'),
-          text: 'おはゲルゲ¥n'
+          text: 'おはゲルゲ\rこんにちゲルゲ'
         }
       })
     }
