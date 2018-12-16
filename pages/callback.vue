@@ -22,13 +22,12 @@ export default {
       const res = await API.post('backend', '/access_token', {
         body: {
           oauth_token: this.oauth_token,
-          oauth_token_secret: sessionStorage.getItem('oauth_token_secret'),
+          oauth_token_secret: this.$cookie.get('oauth_token_secret'),
           oauth_verifier: this.oauth_verifier
         }
       })
-      console.log(res)
-      sessionStorage.setItem('access_token', res.access_token)
-      sessionStorage.setItem('access_token_secret', res.access_token_secret)
+      this.$cookie.set('access_token', res.access_token)
+      this.$cookie.set('access_token_secret', res.access_token_secret)
     }
   }
 }

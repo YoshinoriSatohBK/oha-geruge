@@ -1,7 +1,6 @@
 <template lang="pug">
   div
-    el-button.button(@click.stop="login()") Login
-    el-button.button おはゲルゲ
+    el-button.button(@click.stop="tweet()") おはゲルゲ
 </template>
 
 <script>
@@ -9,14 +8,16 @@ import { API } from 'aws-amplify'
 
 export default {
   components: {},
+  middleware: 'authenticated',
   methods: {
-    async login() {
-      const res = await API.post('backend', '/request_token', {})
-      sessionStorage.setItem('oauth_token', res.oauth_token)
-      sessionStorage.setItem('oauth_token_secret', res.oauth_token_secret)
-      window.location =
-        'https://api.twitter.com/oauth/authenticate?oauth_token=' +
-        res.oauth_token
+    async tweet() {
+      const res = await API.post('backend', '/tweet', {
+        body: {
+          access_token_key: this.$cookie.get('access_token'),
+          access_token_secret: this.$cookie.get('access_token_secret'),
+          text: 'おはゲルゲ¥n'
+        }
+      })
     }
   }
 }

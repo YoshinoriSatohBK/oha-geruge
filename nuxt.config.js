@@ -29,7 +29,11 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/aws-amplify', '@/plugins/element-ui'],
+  plugins: [
+    '@/plugins/aws-amplify',
+    '@/plugins/element-ui',
+    '@/plugins/vue-cookie'
+  ],
 
   /*
   ** Nuxt.js modules
@@ -62,8 +66,8 @@ module.exports = {
         endpoints: [
           {
             name: 'backend',
-            endpoint: 'https://97rrz7ttfd.execute-api.ap-northeast-1.amazonaws.com/Prod',
-            //endpoint: 'http://localhost:3000',
+            endpoint:
+              'https://97rrz7ttfd.execute-api.ap-northeast-1.amazonaws.com/Prod',
             region: 'ap-northeast-1'
           }
         ]
