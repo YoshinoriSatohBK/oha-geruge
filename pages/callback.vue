@@ -28,6 +28,7 @@ export default {
       })
       localStorage.setItem('access_token', res.access_token)
       localStorage.setItem('access_token_secret', res.access_token_secret)
+      window.location.href = '/'
     }
   }
 }
