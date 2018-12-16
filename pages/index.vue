@@ -10,6 +10,7 @@
       @click.stop="tweet('morning')"
       type="primary"
       plain
+      disabled="processing"
     ) おはゲルゲ
 </template>
 
@@ -21,13 +22,14 @@ export default {
   middleware: 'authenticated',
   data() {
     return {
+      processing: false,
       text:
         'おはゲルゲ！\r#ディアブルボア\r\rおはゲルゲボタンであなたも気軽におはゲルゲ！\rhttps://musing-torvalds-d26081.netlify.com/\r'
     }
   },
   methods: {
     async tweet(type) {
-      const res = await API.post('backend', '/tweet', {
+      await API.post('backend', '/tweet', {
         body: {
           access_token_key: localStorage.getItem('access_token'),
           access_token_secret: localStorage.getItem('access_token_secret'),
@@ -35,6 +37,7 @@ export default {
           type: type
         }
       })
+      this.$router.push('/complete')
     }
   }
 }
