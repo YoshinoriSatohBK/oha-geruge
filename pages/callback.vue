@@ -1,6 +1,5 @@
 <template lang="pug">
-  div callback
-    el-button.button おはゲルゲ
+  div おはゲルゲ
 </template>
 
 <script>
