@@ -10,7 +10,7 @@
       @click.stop="tweet('morning')"
       type="primary"
       plain
-      disabled="processing"
+      disabled="!processing"
     ) おはゲルゲ
 </template>
 
