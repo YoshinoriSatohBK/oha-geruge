@@ -24,7 +24,7 @@ export default {
     return {
       processing: false,
       text:
-        'おはゲルゲ！\r#ディアブルボア\r\rおはゲルゲボタンであなたも気軽におはゲルゲ！\rhttps://musing-torvalds-d26081.netlify.com/\r'
+        'おはゲルゲ！\r\n#ディアブルボア\r\n\r\nおはゲルゲボタンであなたも気軽におはゲルゲ！\r\nhttps://musing-torvalds-d26081.netlify.com/'
     }
   },
   methods: {
