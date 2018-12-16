@@ -10,7 +10,7 @@
       @click.stop="tweet('morning')"
       type="primary"
       plain
-      disabled="!processing"
+      :disabled="!processing"
     ) おはゲルゲ
 </template>
 
@@ -29,6 +29,7 @@ export default {
   },
   methods: {
     async tweet(type) {
+      this.processing = true
       await API.post('backend', '/tweet', {
         body: {
           access_token_key: localStorage.getItem('access_token'),
@@ -37,6 +38,7 @@ export default {
           type: type
         }
       })
+      this.processing = false
       this.$router.push('/complete')
     }
   }
