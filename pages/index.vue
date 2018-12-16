@@ -13,8 +13,8 @@ export default {
     async tweet() {
       const res = await API.post('backend', '/tweet', {
         body: {
-          access_token_key: this.$cookie.get('access_token'),
-          access_token_secret: this.$cookie.get('access_token_secret'),
+          access_token_key: localStorage.getItem('access_token'),
+          access_token_secret: localStorage.getItem('access_token_secret'),
           text: 'おはゲルゲ¥n'
         }
       })

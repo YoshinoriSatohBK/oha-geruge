@@ -31,8 +31,7 @@ module.exports = {
   */
   plugins: [
     '@/plugins/aws-amplify',
-    '@/plugins/element-ui',
-    '@/plugins/vue-cookie'
+    '@/plugins/element-ui'
   ],
 
   /*
