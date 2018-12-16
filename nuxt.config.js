@@ -2,7 +2,6 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'spa',
-
   /*
   ** Headers of the page
   */
@@ -29,10 +28,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '@/plugins/aws-amplify',
-    '@/plugins/element-ui'
-  ],
+  plugins: ['@/plugins/aws-amplify', '@/plugins/element-ui'],
 
   /*
   ** Nuxt.js modules
@@ -58,7 +54,6 @@ module.exports = {
       }
     }
   },
-  mode: 'spa',
   env: {
     Amplify: {
       API: {
