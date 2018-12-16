@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       text:
-        'おはゲルゲ！\r\rおはゲルゲボタンで、あなたも簡単におはゲルゲ！\rhttps://musing-torvalds-d26081.netlify.com/\r#ディアブルボア'
+        'おはゲルゲ！\r#ディアブルボア\r\rおはゲルゲボタン\rhttps://musing-torvalds-d26081.netlify.com/\r'
     }
   },
   methods: {
