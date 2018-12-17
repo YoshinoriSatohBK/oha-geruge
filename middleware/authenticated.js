@@ -3,7 +3,7 @@ import { API } from 'aws-amplify'
 export default async function({ store, redirect }) {
   if (localStorage.getItem('access_token')) {
     const res = await API.get('backend', '/get_user', {
-      body: {
+      queryStringParameters: {
         access_token_key: localStorage.getItem('access_token'),
         access_token_secret: localStorage.getItem('access_token_secret')
       }
