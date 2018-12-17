@@ -32,8 +32,8 @@ export default {
       this.processing = true
       await API.post('backend', '/tweet', {
         body: {
-          access_token_key: localStorage.getItem('access_token'),
-          access_token_secret: localStorage.getItem('access_token_secret'),
+          access_token_key: sessionStorage.getItem('access_token'),
+          access_token_secret: sessionStorage.getItem('access_token_secret'),
           text: this.text,
           type: type
         }
