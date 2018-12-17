@@ -14,9 +14,9 @@ export default async function({ store, redirect }) {
     const res = await API.post('backend', '/request_token', {})
     localStorage.setItem('oauth_token', res.oauth_token)
     localStorage.setItem('oauth_token_secret', res.oauth_token_secret)
-    // return redirect(
-    //   'https://api.twitter.com/oauth/authenticate?oauth_token=' +
-    //     res.oauth_token
-    // )
+    return redirect(
+      'https://api.twitter.com/oauth/authenticate?oauth_token=' +
+        res.oauth_token
+    )
   }
 }
