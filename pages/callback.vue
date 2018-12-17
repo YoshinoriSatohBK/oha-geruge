@@ -1,5 +1,5 @@
 <template lang="pug">
-  div おはゲルゲ
+  div waiting...
 </template>
 
 <script>
@@ -27,7 +27,7 @@ export default {
       })
       sessionStorage.setItem('access_token', res.access_token)
       sessionStorage.setItem('access_token_secret', res.access_token_secret)
-      this.$router.push('/')
+      window.location.href = '/'
     }
   }
 }
