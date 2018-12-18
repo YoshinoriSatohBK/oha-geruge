@@ -12,7 +12,7 @@
 export default {
   methods: {
     imageUrl() {
-      return sessionStorage.getItem('profile_image_url')
+      return sessionStorage.getItem('profile_image_url_https')
     }
   }
 }

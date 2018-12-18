@@ -9,7 +9,10 @@ export default async function({ store, redirect }) {
       }
     })
     console.log(res)
-    sessionStorage.setItem('profile_image_url', res.profile_image_url)
+    sessionStorage.setItem(
+      'profile_image_url_https',
+      res.profile_image_url_https
+    )
   } else {
     const res = await API.post('backend', '/request_token', {})
     sessionStorage.setItem('oauth_token', res.oauth_token)
