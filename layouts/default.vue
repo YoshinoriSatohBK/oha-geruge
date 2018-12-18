@@ -4,11 +4,6 @@
       el-header.header
         div.title おはゲルゲボタン(β)
         img(v-if="imageUrl()" :src="imageUrl()").twicon
-        el-button.button(
-          @click.stop="signout()"
-          type="primary"
-          plain
-        ) アカウントを切り替える
       el-main.main
         nuxt
 </template>
@@ -18,13 +13,6 @@ export default {
   methods: {
     imageUrl() {
       return sessionStorage.getItem('profile_image_url')
-    },
-    signout() {
-      sessionStorage.removeItem('oauth_token')
-      sessionStorage.removeItem('oauth_token_secret')
-      sessionStorage.removeItem('access_token')
-      sessionStorage.removeItem('access_token_secret')
-      window.location.href = '/'
     }
   }
 }
@@ -35,7 +23,6 @@ export default {
     text-align center
     vertical-align middle
     font-size 1.3rem
-
     display inline-block
   .twicon
     margin-left 1rem
