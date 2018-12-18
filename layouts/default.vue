@@ -2,7 +2,7 @@
   div
     el-container.whole
       el-header.header
-        div.title おはゲルゲボタン(β)
+        div.title おはゲルゲボタン
         img(v-if="imageUrl()" :src="imageUrl()").twicon
       el-main.main
         nuxt
