@@ -39,7 +39,6 @@ export default {
           type: type
         }
       })
-      this.processing = false
       this.$router.push('/complete')
     }
   }
