@@ -4,6 +4,11 @@
       el-header.header
         div.title おはゲルゲボタン(β)
         img(v-if="imageUrl()" :src="imageUrl()").twicon
+        el-button.button(
+          @click.stop="signout()"
+          type="primary"
+          plain
+        ) アカウントを切り替える
       el-main.main
         nuxt
 </template>
@@ -13,6 +18,10 @@ export default {
   methods: {
     imageUrl() {
       return sessionStorage.getItem('profile_image_url')
+    },
+    signout() {
+      sessionStorage.removeItem('access_token')
+      window.location.href = '/'
     }
   }
 }
