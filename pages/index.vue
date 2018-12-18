@@ -13,6 +13,8 @@
       :disabled="processing"
       v-loading="processing"
     ) おはゲルゲ
+
+    div アカウントを切り替える場合は、一度ブラウザを完全に閉じるか、シークレットモードで本URLへアクセスしてください。
 </template>
 
 <script>
