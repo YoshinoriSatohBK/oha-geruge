@@ -20,7 +20,10 @@ export default {
       return sessionStorage.getItem('profile_image_url')
     },
     signout() {
+      sessionStorage.removeItem('oauth_token')
+      sessionStorage.removeItem('oauth_token_secret')
       sessionStorage.removeItem('access_token')
+      sessionStorage.removeItem('access_token_secret')
       window.location.href = '/'
     }
   }
