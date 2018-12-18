@@ -1,11 +1,11 @@
 <template lang="pug">
-  div.this
+  div.container
+
     el-input(
       type="textarea"
       :rows="10"
       v-model="text"
     )
-
     el-button.button(
       @click.stop="tweet('morning')"
       type="primary"
@@ -13,8 +13,7 @@
       :disabled="processing"
       v-loading="processing"
     ) おはゲルゲ
-
-    div アカウントを切り替える場合は、一度ブラウザを完全に閉じるか、シークレットモードで本URLへアクセスしてください。
+    div.notice アカウントを切り替える場合は、一度ブラウザを完全に閉じるか、シークレットモードで本URLへアクセスしてください。
 </template>
 
 <script>
@@ -27,7 +26,7 @@ export default {
     return {
       processing: false,
       text:
-        'おはゲルゲ！\r\n#ディアブルボア\r\n\r\nおはゲルゲボタンで気軽におはゲルゲ！\r\nhttps://musing-torvalds-d26081.netlify.com/'
+        'おはゲルゲ！\r\n#ディアブルボア\r\n\r\nおはゲルゲボタンであなたもおはゲルゲ！\r\nhttps://musing-torvalds-d26081.netlify.com/'
     }
   },
   methods: {
@@ -48,8 +47,11 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  .this
+  .container
     margin auto
+    max-width 400px
   .button
     margin 20px 0px
+  .notice
+    font-size 0.8rem
 </style>
