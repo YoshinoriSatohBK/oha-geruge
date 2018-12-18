@@ -11,6 +11,7 @@
       type="primary"
       plain
       :disabled="processing"
+      v-loading="processing"
     ) おはゲルゲ
 </template>
 
