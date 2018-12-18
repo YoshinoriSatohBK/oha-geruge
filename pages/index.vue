@@ -1,6 +1,7 @@
 <template lang="pug">
   div.container
-
+    div.description 簡単におはゲルゲツイートできます。
+    div.description_sub （ディアブルボア ハルカちゃんやペンネちゃんの画像とともに以下のテキストがツイートされます。）
     el-input(
       type="textarea"
       :rows="10"
@@ -26,7 +27,7 @@ export default {
     return {
       processing: false,
       text:
-        'おはゲルゲ！\r\n#ディアブルボア\r\n\r\nおはゲルゲボタンであなたもおはゲルゲ！\r\nhttps://musing-torvalds-d26081.netlify.com/'
+        'おはゲルゲ！\r\n#ディアブルボア\r\n\r\nおはゲルゲボタンで気軽におはゲルゲ！\r\nhttps://musing-torvalds-d26081.netlify.com/'
     }
   },
   methods: {
@@ -52,6 +53,12 @@ export default {
     max-width 400px
   .button
     margin 20px 0px
+  .description
+    margin 10px
+    font-size 1rem
+  .description_sub
+    margin 10px
+    font-size 0.8rem
   .notice
     font-size 0.8rem
 </style>
