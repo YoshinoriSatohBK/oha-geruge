@@ -10,14 +10,6 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { property: 'og:title', content: 'おはゲルゲボタン' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'おはゲルゲボタン' },
-      { property: 'og:url', content: 'https://oha-geruge.netlify.com' },
-      { property: 'og:description', content: 'おはゲルゲボタン' },
-      // { property: 'og:image', content: this.$store.state.assetsHost + '/article/' + this.article.id + '/head.jpg' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@5f78xJ5NGn5sljw' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
