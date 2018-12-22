@@ -18,6 +18,14 @@ export default {
   },
   methods: {
     async access_token() {
+      console.log('access_token')
+      console.log({
+        oauth_token: this.oauth_token,
+        oauth_token_secret: sessionStorage.getItem('oauth_token_secret'),
+        oauth_verifier: this.oauth_verifier
+      })
+
+
       const res = await API.post('backend', '/access_token', {
         body: {
           oauth_token: this.oauth_token,
