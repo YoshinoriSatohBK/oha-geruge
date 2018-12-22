@@ -27,7 +27,10 @@ export default {
       })
       sessionStorage.setItem('access_token', res.access_token)
       sessionStorage.setItem('access_token_secret', res.access_token_secret)
-      window.location.href = '/'
+      if (window.open('/', '_blank')) {
+      } else {
+        window.location.href = '/'
+      }
     }
   }
 }
