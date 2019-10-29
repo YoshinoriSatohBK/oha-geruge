@@ -3,9 +3,9 @@
     div.complete-text おはゲルゲ完了！
     el-row
       el-col(:span="8")
-        img(src="https://pbs.twimg.com/profile_images/1058000656500322304/uSGYRaZo_400x400.jpg").twicon
+        img(src="https://pbs.twimg.com/profile_images/1134862941855989760/KrB1jf9O_400x400.jpg").twicon
       el-col(:span="16")
-        div.profile-text ハルカ 🦇ディアブルボア6/1初ワンマン
+        div.profile-text ハルカ🦇ディアブルボア#1126ペンネ初主催
         a.twitter-follow-button(
           href="https://twitter.com/haluka0919"
           :data-size="followButtonSize"
