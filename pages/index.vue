@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       processing: false,
-      text: 'おはゲルゲ！\r\n#ディアブルボア\r\n#0917ディアブルボア赤羽ReNY\r\n\r\nおはゲルゲボタンで気軽におはゲルゲ！\r\nhttps://oha-geruge-geruge.netlify.com/'
+      text: 'おはゲルゲ！\r\n#ディアブルボア\r\n#0917ディアブルボア赤羽ReNY\r\n\r\nおはゲルゲボタンで気軽におはゲルゲ！\r\nhttps://oha-geruge-3.netlify.com/'
     }
   },
   methods: {
