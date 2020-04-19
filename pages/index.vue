@@ -1,5 +1,6 @@
 <template lang="pug">
   div.container
+    div.announce ごめんなさい。一旦休止してます。
     div.description 簡単におはゲルゲツイートできます。
     div.description_sub （ディアブルボア ハルカちゃんやペンネちゃんの画像とともに以下のテキストがツイートされます。）
     el-input(
@@ -7,13 +8,13 @@
       :rows="10"
       v-model="text"
     )
-    el-button.button(
-      @click.stop="tweet('morning')"
-      type="primary"
-      plain
-      :disabled="processing"
-      v-loading="processing"
-    ) おはゲルゲ
+    //- el-button.button(
+    //-   @click.stop="tweet('morning')"
+    //-   type="primary"
+    //-   plain
+    //-   :disabled="processing"
+    //-   v-loading="processing"
+    //- ) おはゲルゲ
     div.notice アカウントを切り替える場合は、一度ブラウザを完全に閉じるか、シークレットモードで本URLへアクセスしてください。
 </template>
 
@@ -22,11 +23,11 @@ import { API } from 'aws-amplify'
 
 export default {
   components: {},
-  middleware: 'authenticated',
+  // middleware: 'authenticated',
   data() {
     return {
       processing: false,
-      text: 'おはゲルゲ！\r\n#ディアブルボア\r\n#0917ディアブルボア赤羽ReNY\r\n\r\nおはゲルゲボタンで気軽におはゲルゲ！\r\nhttps://oha-geruge-3.netlify.app/'
+      text: 'おはゲルゲ！\r\n#ディアブルボア\r\n#0917ディアブルボア赤羽ReNY\r\n\r\nおはゲルゲボタンで気軽におはゲルゲ！\r\nhttps://oha-geruge.netlify.app/'
     }
   },
   methods: {
@@ -52,6 +53,10 @@ export default {
     max-width 400px
   .button
     margin 20px 0px
+  .announce
+    margin 10px
+    font-size 1rem
+    color #ff6347
   .description
     margin 10px
     font-size 1rem
